@@ -15,20 +15,35 @@
             <section class="radio">
                 <h2>Easy Living Standortsuche</h2>
                 <fieldset>
-                    <label for="search">Suche
-                        <input id="search" name="search" size="40">
-                    </label>
+                    <!--<label for="search">Suche-->
+                        <!--<input id="search" name="search" size="40">-->
+                    <div class="form-group">
+                      <label for="usr">Suche nach Stadt:</label>
+                      <input type="text" class="form-control" id="usr">{{ Suchanfrage }}
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <!--</label>-->
                     <br/>
                     <br/>
                     <legend>Filter</legend>
 
-                    <label><input type="checkbox" name="filter" value="ki">  Kindergärten</label><br/>
-                    <label><input type="checkbox" name="filter" value="sc">  Schulen</label><br/>
-                    <label><input type="checkbox" name="filter" value="ae">  Ärzte</label><br/>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="">Kindergärten</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="">Schulen</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="">Ärzte</label>
+                    </div>
+
+                    <div class="panel-group">
+                      <div class="panel panel-default">
+                        <div class="panel-body">Karte</div>
+                      </div>
+                    </div>
 
                     </label>
-
-
                 </fieldset>
             </section>
         </div>

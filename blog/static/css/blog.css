@@ -57,3 +57,14 @@ body {
     background-position: right  bottom;
     background-attachment:fixed;
 }
+
+.panel-default {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    top: 0px;
+    left: 400px;
+    background-image: url("Karte.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
