@@ -15,7 +15,7 @@
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Montserrat Subrayada', sans-serif;
 }
 
 .date {
@@ -53,18 +53,39 @@ img {
 body {
     background-image: url("Logo.jpg");
     background-repeat: no-repeat;
-    background-size: 40%;
-    background-position: right  bottom;
+    background-size: 18%;
+    background-position: left  bottom;
     background-attachment:fixed;
+
 }
 
 .panel-default {
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 60%;
     position: relative;
-    top: 0px;
+    top: -200px;
     left: 400px;
     background-image: url("Karte.png");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    border-color: black;
+    border-width: 3px;
+}
+
+.checkbox {
+    font-size: 14pt;
+}
+
+.suchLabel {
+    font-size: 14pt;
+}
+
+.btn-default {
+    font-size: 14pt;
+}
+
+.form-control {
+    min-width: 0;
+    width: 300px;
+    color:red;
 }
