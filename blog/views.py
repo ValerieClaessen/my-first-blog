@@ -10,13 +10,14 @@ from .models import Post
 
 def stadt_suchen(request):
     suchen = Suche.objects.all()
+    print (request.POST.get('suchanfrage', ''))
     return render(request,  'blog/stadt_suchen.html', {'suchen': suchen})
 
-def suche_speichern(request):
-    stadt_input = request.POST.get('suchanfrage', '')
-    s = Suche.objects.create(text = stadt_input)
-    s.save()
-    return s # hier gebe ich definitiv das falsche zurück, muss irgend ein Render bla sein...
+# def suche_speichern(request):
+#     stadt_input = request.POST.get('suchanfrage', '')
+#     s = Suche.objects.create(text = stadt_input)
+#     s.save()
+#     return s # hier gebe ich definitiv das falsche zurück, muss irgend ein Render bla sein...
 
 
 
