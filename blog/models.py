@@ -1,5 +1,7 @@
 from django.db import models
+from django.http import HttpResponse
 from django.utils import timezone
+
 
 
 
@@ -18,3 +20,18 @@ class Post(models.Model):
 
     def __str__(self):
         return self.searchfield
+
+
+class Suche(models.Model):
+    zeitstempel = models.DateTimeField()
+    text = models.TextField('eingegebene Suche')
+
+
+
+
+
+
+
+    def __str__(self):
+        return self.text
+

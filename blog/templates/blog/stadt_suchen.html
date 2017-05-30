@@ -15,14 +15,14 @@
             <section class="radio">
                 <h2>Easy Living Standortsuche</h2>
                 <fieldset>
-                    <!--<label for="search">Suche-->
-                        <!--<input id="search" name="search" size="40">-->
+                <form method="post" action="">
+                    {% csrf_token %}
                     <div class="form-group">
                       <label class="suchLabel" for="usr">Suche nach Stadt:</label>
-                      <input type="search" class="form-control" id="usr">{{ Suchanfrage }}
+                      <input type="text" name="suchanfrage" id = "usr" value="{{ suchanfrage }}"/>
                     </div>
                     <button type="submit" class="btn btn-default">Suchen</button>
-                    <!--</label>-->
+                </form>
                     <br/>
                     <br/>
                     <legend>Filter</legend>
@@ -37,6 +37,16 @@
                       <label><input type="checkbox" value="">Ärzte</label>
                     </div>
 
+                    <div class="form-group">
+                      <label for="usr">
+                          {% for suche in suchen %}
+                              <div class="suche">
+                                  <p>{{ suche.text|linebreaksbr }}</p>
+                              </div>
+                          {% endfor %}
+                      </label>
+                    </div>
+
                     <div class="panel-group">
                       <div class="panel panel-default">
                         <div class="panel-body">Karte</div>
@@ -44,25 +54,11 @@
                     </div>
 
                     </label>
+
                 </fieldset>
             </section>
         </div>
 
-        <!--<div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                    &lt;!&ndash;{% for post in posts %}&ndash;&gt;
-                        &lt;!&ndash;<div class="post">&ndash;&gt;
-                            &lt;!&ndash;<div class="date">&ndash;&gt;
-                                &lt;!&ndash;<p>published: {{ post.published_date }}</p>&ndash;&gt;
-                            &lt;!&ndash;</div>&ndash;&gt;
-                            &lt;!&ndash;<h1><a href="">{{ post.title }}</a></h1>&ndash;&gt;
-                            &lt;!&ndash;<p>{{ post.text|linebreaksbr }}</p>&ndash;&gt;
-                        &lt;!&ndash;</div>&ndash;&gt;
 
-                    &lt;!&ndash;{% endfor %}&ndash;&gt;
-                </div>
-            </div>
-        </div>-->
     </body>
 </html>
